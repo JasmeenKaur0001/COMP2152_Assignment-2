@@ -40,6 +40,8 @@ class NetworkTool:
     # The setter ensures validation before assigning values, preventing invalid input.
     # This improves data security and makes the code more maintainable.
     @property
+def target(self):
+    @property
     def target(self):
         return self.__target
 
@@ -59,6 +61,8 @@ class NetworkTool:
 # For example, the constructor is reused using super().__init__(target).
 # This avoids rewriting code and improves maintainability.
 class PortScanner(NetworkTool):
+
+class PortScanner(NetworkTool):
     def __init__(self, target):
         super().__init__(target)
         self.scan_results = []
@@ -73,6 +77,8 @@ class PortScanner(NetworkTool):
         # Without try-except, the program could crash if a network error occurs.
         # Errors like unreachable host or timeout would stop execution.
         # Using try-except ensures the program continues scanning other ports.
+        try:
+
         try:
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             sock.settimeout(1)
@@ -97,6 +103,8 @@ class PortScanner(NetworkTool):
     # Threading allows multiple ports to be scanned at the same time, making the process faster.
     # Without threading, scanning many ports sequentially would take a long time.
     # Using threads improves performance significantly by parallel execution.
+    def scan_range(self, start_port, end_port):
+
     def scan_range(self, start_port, end_port):
         threads = []
 
@@ -201,3 +209,6 @@ if __name__ == "__main__":
 # I would add a feature to filter scan results by specific services like HTTP or SSH.
 # This could be implemented using a list comprehension to return only matching services.
 # Diagram: See diagram_101583168.png in the repository root
+
+# Diagram: See diagram_101583168.png in the repository root
+
