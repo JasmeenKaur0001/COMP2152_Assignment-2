@@ -206,9 +206,8 @@ if __name__ == "__main__":
 
 
 # Q5: New Feature Proposal
-# I would add a feature to filter scan results by specific services like HTTP or SSH.
-# This could be implemented using a list comprehension to return only matching services.
+# I would add a feature to classify open ports based on security risk levels (high, medium, low).
+# This would use nested if-statements to check port numbers and assign a risk category.
 # Diagram: See diagram_101583168.png in the repository root
 
-# Diagram: See diagram_101583168.png in the repository root
 
